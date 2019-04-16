@@ -1,7 +1,8 @@
 # SecretServerAPI
 
 Dependencies
-======
+---
+
 - PHP 7.3
 - PHP 7.3 XML extension
 - PHP 7.3 SQLite3 extension
@@ -17,13 +18,15 @@ $ apt-get install php7.3-xml
 $ apt-get install php7.3-sqlite3
 ```
 
-Usage
-======
+### Configuration
+| Environment variable | Description               |
+| -------- | -------------------- |
+| APP_KEY      | Random generated 64 bit key used for AES-128-ECB encryption. |
+| APP_PARSER      | You can switch between XML and JSON parser.        |
 
 SecretServerAPI use both GET and POST method. For further information see below.
 
-POST /secret
-------
+### POST /secret
 
 ### Expected Response Types
 | Response | Reason               |
@@ -49,9 +52,7 @@ POST /secret
 | --------------------------------- |
 | application/x-www-form-urlencoded |
 
-GET /secret/{hash}
-------
-
+### GET /secret/{hash}
 ### Expected Response Types
 | Response | Reason               |
 | -------- | -------------------- |
