@@ -19,6 +19,7 @@ $ apt-get install php7.3-sqlite3
 ```
 
 ### Configuration
+The following variables are used in .env file:
 | Environment variable | Description               |
 | -------- | -------------------- |
 | APP_KEY      | Random generated 64 bit key used for AES-128-ECB encryption. |
