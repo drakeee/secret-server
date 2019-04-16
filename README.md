@@ -1,6 +1,7 @@
 # SecretServerAPI
 
-### Dependencies
+Dependencies
+======
 - PHP 7.3
 - PHP 7.3 XML extension
 - PHP 7.3 SQLite3 extension
@@ -16,11 +17,13 @@ $ apt-get install php7.3-xml
 $ apt-get install php7.3-sqlite3
 ```
 
-### Usage
+Usage
+======
 
 SecretServerAPI use both GET and POST method. For further information see below.
 
-### POST /secret
+POST /secret
+------
 
 ### Expected Response Types
 | Response | Reason               |
@@ -46,7 +49,9 @@ SecretServerAPI use both GET and POST method. For further information see below.
 | --------------------------------- |
 | application/x-www-form-urlencoded |
 
-### GET /secret/{hash}
+GET /secret/{hash}
+------
+
 ### Expected Response Types
 | Response | Reason               |
 | -------- | -------------------- |
