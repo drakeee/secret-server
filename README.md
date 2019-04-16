@@ -10,6 +10,8 @@ Dependencies
 - [UniSharp/laravel-ckeditor](https://github.com/UniSharp/laravel-ckeditor)
 SecretServerAPI requires [Laravel](https://laravel.com/docs/5.8/installation) 5.8.12+ to run.
 
+SecretServerAPI use SQLite3 as database.
+
 Install the dependencies.
 
 ```sh
