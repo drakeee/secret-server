@@ -12,8 +12,13 @@ SecretServerAPI requires [Laravel](https://laravel.com/docs/5.8/installation) 5.
 
 SecretServerAPI use SQLite3 as database.
 
-Install the dependencies.
+### Installation.
+- Before using the API we need to migrate the database. To do that locate the API folder and run the following command (in bash or command line):
+``` sh
+php artisan migrate
+```
 
+- Install the dependencies:
 ```sh
 $ apt-get install php7.3
 $ apt-get install php7.3-xml
