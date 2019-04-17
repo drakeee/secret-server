@@ -43,10 +43,12 @@ class SecretController extends Controller
 
 		if($formatType === "JSON")
 			//Return the secret message as JSON format
-			return $formatter->toJson();
+			//return $formatter->toJson();
+			return response($formatter->toJson(), 200)->header('Content-Type', 'application/json');
 		else
 			//Return the secret message as XML format
-			return $formatter->toXml();
+			//return $formatter->toXml();
+			return response($formatter->toXml(), 200)->header('Content-Type', 'application/xml');
 	}
 
 	public function ServeData($hash)
@@ -56,7 +58,7 @@ class SecretController extends Controller
 
 		//If secret message does not exist
 		if(!$secretMessage)
-			return "Secret not found";
+			return response("Secret not found", 404);
 
 		//Convert string dates to numeric seconds
 		$expiresAt = strtotime($secretMessage->expiresAt);
@@ -73,7 +75,7 @@ class SecretController extends Controller
 		{
 			//Delete secret message and return error message
 			$secretMessage->delete();
-			return "Secret not found";
+			return response("Secret not found", 404);
 		}
 
 		//If the given statements are not true save the new available views
@@ -90,9 +92,11 @@ class SecretController extends Controller
 
 		if($formatType === "JSON")
 			//Return the secret message as JSON format
-			return $formatter->toJson();
+			//return $formatter->toJson();
+			return response($formatter->toJson(), 200)->header('Content-Type', 'application/json');
 		else
 			//Return the secret message as XML format
-			return $formatter->toXml();
+			//return $formatter->toXml();
+			return response($formatter->toXml(), 200)->header('Content-Type', 'application/xml');
 	}
 }
